@@ -15,7 +15,8 @@
         "typescript",
         "angular-eslint",
         "jsdom",
-        "vitest"
+        "vitest",
+        "eslint"
       ],
       "enabled": false
     },
