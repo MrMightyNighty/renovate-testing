@@ -1,0 +1,30 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "branchPrefix": "feature/",
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "minimumReleaseAge": "5 days",
+      "matchUpdateTypes": ["major"],
+      "matchPackageNames": [
+        "@angular/**",
+        "@angular-eslint/**",
+        "@angular-devkit/**",
+        "@schematics/angular",
+        "typescript",
+        "angular-eslint",
+        "jsdom",
+        "vitest"
+      ]
+    },
+    {
+      "groupName": "All dependencies - Frontend",
+      "matchDatasources": ["npm"],
+      "minimumReleaseAge": "5 days",
+      "rangeStrategy": "bump"
+    }
+  ],
+  "enabledManagers": ["npm"],
+  "branchConcurrentLimit": 5
+}
